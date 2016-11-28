@@ -13,12 +13,23 @@ app.get('/home', function(req, res) {
   res.json({message : 'routing is working'});
 });
 
-
 app.post('/newstud', function(req, res) {
-    console.log("Request processed");
-    console.log(req.body);
+  console.log("Request processed");
+  console.log(req.body);
+  var student = new Student(req.body);
+  student.save(function(err) {
+    if(err) {
+      res.send(err);
+    } else {
+      res.redirect('/admission');
+    }
   });
+});
 
+app.post('/newcourse', function(req, res) {
+  console.log("New course added");
+  console.log(req.body);
+});
 app.use('/', express.static(__dirname + '/public'));
 
 app.listen(3000, function() {
