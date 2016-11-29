@@ -1,10 +1,12 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
+var connectionOne = require('../connections/studconnect');
 
 var studSchema = new Schema({
   first_name: String,
   last_name: String,
   address: String,
+  stud_code: String,
   father_name: String,
   male: String,
   female: String,
@@ -18,9 +20,12 @@ var studSchema = new Schema({
   passyear1: String,
   institution1: String,
   course: String,
-  marks1: String
+  marks1: String,
+  course_code: String,
+  course_name: String,
+  course_duration: String
 });
 
-var Student = mongoose.model('Student', studSchema);
+//var Student = mongoose.model('Student', studSchema);
 
-module.exports = Student;
+module.exports = connectionOne.model('students', studSchema);
