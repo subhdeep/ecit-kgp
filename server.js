@@ -69,7 +69,7 @@ app.post('/newstud', function(req, res) {
       pdf.font("Times-Roman", 16);
       pdf.text("Year                    Name of Institution        Degree           Marks");
       pdf.font("Times-Roman", 12);
-      pdf.text(req.body.passyear + "                               " + req.body.institution + "                            " + req.body.degree + "                       " + req.body.marks);
+      pdf.text(req.body.passyear + "                               " + req.body.institution + "                                     " + req.body.degree + "                                " + req.body.marks);
 
       pdf.moveDown()
       pdf.font("Times-Roman", 20);
