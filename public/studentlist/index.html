@@ -21,6 +21,7 @@
 
     <!--My script-->
     <script src="./js/app.js"></script>
+    <script src="./js/script.js"></script>
 
     <!--My stylesheet-->
     <link href="./css/style.css" rel="stylesheet">
@@ -33,35 +34,35 @@
           <label for="search"><i class="material-icons">search</i></label>
           <i class="material-icons">close</i>
         </div>
-        <div class="input-field col s4">
-          <input type="text" name="delete" required>
-          <label for="delete">Delete</label>
+          <div class="input-field col s4">
+            <input type="text" name="del" id="del">
+            <label for="delete">Delete</label>
+          </div>
+          <div class="col s2">
+              <button class="btn waves-effect waves-light" id="dele">DELETE</button>
+          </div>
+        <div class="row" >
+          <div class="col s4 center-align">
+            <h4>Student Name</h4>
+            <div class="collection">
+              <a href="#" class="collection-item" ng-repeat="student in lists.students | filter:query">{{student.first_name + " " + student.last_name}}</a>
+            </div>
+          </div>
+          <div class="col s4 center-align">
+            <h4>Student Code</h4>
+            <div class="collection">
+              <a href="#" class="collection-item" ng-repeat="student in lists.students | filter:query">{{student.stud_code}}</a>
+            </div>
+          </div>
+          <div class="col s4 center-align">
+            <h4>Contact Details</h4>
+            <div class="collection">
+              <a href="#" class="collection-item" ng-repeat="student in lists.students | filter:query">{{student.telephone}}</a>
+            </div>
+          </div>
         </div>
-        <div class="col s2">
-          <button type="submit">
       </div>
-      <div class="row" >
-        <div class="col s4 center-align">
-          <h4>Student Name</h4>
-          <div class="collection">
-            <a href="#" class="collection-item" ng-repeat="student in lists.students | filter:query">{{student.first_name + " " + student.last_name}}</a>
-          </div>
-        </div>
-        <div class="col s4 center-align">
-          <h4>Student Code</h4>
-          <div class="collection">
-            <a href="#" class="collection-item" ng-repeat="student in lists.students | filter:query">{{student.passyear}}</a>
-          </div>
-        </div>
-        <div class="col s4 center-align">
-          <h4>Contact Details</h4>
-          <div class="collection">
-            <a href="#" class="collection-item" ng-repeat="student in lists.students | filter:query">{{student.telephone}}</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </body>
-</html>
+    </body>
+  </html>
 
 

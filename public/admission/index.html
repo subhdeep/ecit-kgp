@@ -22,7 +22,7 @@
   <body>
     <div class="container">
       <div class="row">
-        <form class="col s12" action="/newstud" method="POST">
+        <form class="col s12" method="POST" action="/newstud">
           <div class="row">
             <div class="input-field col s6">
               <input id="first_name" type="text" class="validate" name="first_name">
@@ -129,11 +129,13 @@
               <input type="text" name="course_duration" class="validate">
               <label for="stud_code">Course Duration</label>
             </div>
-          <button id="submit" class="btn waves-effect waves-light" type="submit">Submit
-            <i class="material-icons right">send</i>
-          </button>
-        </form>
-      </div>
-    </body>
-  </html>
+            <center>
+              <button id="submit" class="btn waves-effect waves-light" type="submit">Submit
+                <i class="material-icons right">send</i>
+              </button>
+            </center>
+          </form>
+        </div>
+      </body>
+    </html>
 

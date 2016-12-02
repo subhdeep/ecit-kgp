@@ -10,10 +10,6 @@ var Course = require('./models/course');
 app.use(bodyParser.urlencoded({ extended: true}));
 app.use(bodyParser.json());
 
-app.get('/home', function(req, res) {
-  res.json({message : 'routing is working'});
-});
-
 app.post('/newstud', function(req, res) {
   console.log("Request processed");
   console.log(req.body);
@@ -122,6 +118,19 @@ app.get('/list', function(req, res) {
       res.status(501).send('Error Occured');
     } else {
       res.json(data);
+    }
+  });
+});
+
+app.delete('/delete/:stu_code', function(req, res) {
+  console.log(req.params.stu_code);
+  Student.remove({
+    stud_code: req.params.stu_code
+  }, function(err) {
+    if(err) {
+      res.send(err);
+    } else {
+      res.json({message: "Student successfully deleted"});
     }
   });
 });
