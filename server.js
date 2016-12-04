@@ -7,6 +7,7 @@ var fs = require('fs');
 var Student = require('./models/student');
 var Course = require('./models/course');
 
+console.log("Reached");
 app.use(bodyParser.urlencoded({ extended: true}));
 app.use(bodyParser.json());
 
@@ -130,7 +131,7 @@ app.delete('/delete/:stu_code', function(req, res) {
     if(err) {
       res.send(err);
     } else {
-      res.json({message: "Student successfully deleted"});
+      res.sendStatus(200);
     }
   });
 });

@@ -20,6 +20,15 @@
     <script src="script/script.js"></script>
   </head>
   <body>
+    <nav>
+      <div class="nav-wrapper">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/studentlist">Student List</a></li>
+          <li ><a href="/addcourse">Add Course</a></li>
+        </ul>
+      </div>
+    </nav>
     <div class="container">
       <div class="row">
         <form class="col s12" method="POST" action="/newstud">
@@ -39,7 +48,7 @@
               <label for="address">Address</label>
             </div>
             <div class="input-field col s4">
-              <input type="text" name="stud_code" class="validate">
+              <input id="stud_code" type="text" name="stud_code" class="validate">
               <label for="stud_code">Student Code</label>
             </div>
           </div>
@@ -59,7 +68,7 @@
           </div>
           <div class="row">
             <div class="input-field col s4">
-              <input id="telephone" type="text" class="validate" size="10" name="telephone">
+              <input id="telephone" type="text" class="validate" maxlength="10" name="telephone">
               <label for="telephone">Telephone</label>
             </div>
             <div class="input-field col s4">
@@ -134,8 +143,10 @@
                 <i class="material-icons right">send</i>
               </button>
             </center>
-          </form>
-        </div>
-      </body>
-    </html>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
 
