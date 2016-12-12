@@ -5,17 +5,13 @@
       Admission Form
     </title>
     <meta charset="utf-8">
-
     <!--Jquery Added-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
-
     <!--My script-->
     <script src="script/script.js"></script>
   </head>
@@ -62,7 +58,7 @@
               <label for="relation">Relation</label>
             </div>
             <div class="input-field col s4">
-              <input id="gphone_no" type="text" class="validate"  name="gphone_no">
+              <input id="gphone_no" type="text" maxlength="10" class="validate"  name="gphone_no">
               <label for="father_name">Gaurdian's Telephone</label>
             </div>
           </div>
@@ -75,7 +71,7 @@
               <input type="date" id="dob" name="birthday" class="datepicker" placeholder="Date-of-Birth">
             </div>
             <div class="input-field col s4">
-              <input id="postal_code" type="text" class="validate" name="postal_code">
+              <input id="postal_code" type="text" maxlength="6" class="validate" name="postal_code">
               <label for="postal_code">Postal Code</label>
             </div>
           </div>
