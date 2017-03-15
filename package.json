@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/subhdeep/ecit-kgp/issues"
   },
-  "homepage": "https://github.com/subhdeep/ecit-kgp#readme"
+  "homepage": "https://github.com/subhdeep/ecit-kgp#readme",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
 }
